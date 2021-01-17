@@ -62,5 +62,52 @@
 
 # print('%.1f MB' %(round(mbyte,2)))
 
-a = list(map(int, input('메시지').split()))
-print(a)
+
+# 86번 문제
+
+# w, h, b = map(int, input().split())
+
+# bit = w * h * b
+
+# byte = bit / 8
+# kbyte = byte / 1024
+# mbyte = kbyte / 1024
+
+# print('%.2f MB' %(round(mbyte, 2)))
+
+
+# 87번 문제
+
+# a = int(input())
+# tmp = 0
+# result = 0
+
+# while result < a:
+#     tmp += 1
+#     result += tmp
+
+# print(result)
+
+
+# 88번 문제
+
+# a = int(input())
+
+# for i in range(1,a+1):
+#     if i%3 == 0:
+#         continue
+#     else:
+#         print(i, end=' ')
+
+# 89번 문제
+
+# a, d, n = map(int, input().split())
+
+# print(d*(n-1) + a)
+
+# 90번 문제
+
+a, r, n = map(int, input().split())
+
+print(a*(r**(n-1)))
+
