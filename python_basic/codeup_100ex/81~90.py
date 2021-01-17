@@ -52,12 +52,15 @@
 
 # 85번 문제
 
-h, b, c, s = map(int, input().split())
+# h, b, c, s = map(int, input().split())
 
-bit = h * b * c * s
+# bit = h * b * c * s
 
-byte = bit / 8
-kbyte = byte / 1024
-mbyte = kbyte / 1024
+# byte = bit / 8
+# kbyte = byte / 1024
+# mbyte = kbyte / 1024
 
-print('%.1f MB' %(round(mbyte,2)))
+# print('%.1f MB' %(round(mbyte,2)))
+
+a = list(map(int, input('메시지').split()))
+print(a)
