@@ -52,8 +52,12 @@
 
 # 85번 문제
 
-h, b, c, s = int(input().split())
+h, b, c, s = map(int, input().split())
 
 bit = h * b * c * s
 
-print(bit)
+byte = bit / 8
+kbyte = byte / 1024
+mbyte = kbyte / 1024
+
+print('%.1f MB' %(round(mbyte,2)))
