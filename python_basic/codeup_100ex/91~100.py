@@ -105,7 +105,7 @@ base = [[0]*19 for _ in range(19)]
 for i in range(19):
     base[i] = list(map(int, input().split()))
 
-print(base)
+# print(base)
 a = int(input())
 for i in range(a):
     x, y = map(int, input().split())
