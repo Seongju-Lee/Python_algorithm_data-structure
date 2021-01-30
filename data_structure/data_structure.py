@@ -1,6 +1,6 @@
-# # 혼자 연습 파일
+# 혼자 연습 파일
 
-# # Linked_List 삽입 구현
+# Linked_List 삽입 구현
 
 class Node:     # 하나의 노드 구현 클래스
 
@@ -16,18 +16,18 @@ class NodeManage:
 
     def add(self, data): # 링크드 리스트 데이터 추가 메소드
         
-        if self.head == None:
+        if self.head == None: # __init__에서 받아온 헤드가 없을 때 사용 -> 사용될 리가 없음
             self.head = Node(data)
-        else:
+        else:                   # 새로운 노드를 추가할 때 사용. head값은 고정 되어 있는 것이고, 그 head를 새로운 변수에 담아 계속하여 탐색 진행
             temp_node = self.head
             while temp_node.next:
                 temp_node = temp_node.next
             
-            temp_node.next = Node(data)
+            temp_node.next = Node(data)         # 노드의 다음이 None일 때, next에 새롭게 추가한 노드를 가르키도록 설정.
 
     def desc(self): # 링크드 리스트에 연결된 데이터 확인 메소드
-        node = self.head
-        while node:
+        node = self.head        # head를 새로운 변수에 넣어줌.
+        while node:             # 다음 주소가 들어있는 새로운 변수가 None이 나오기 전까지는 계속하여 데이터 출력.
             print(node.data)
             node = node.next
 
@@ -37,4 +37,3 @@ for i in range(2,11):
     link.add(i)
 
 link.desc()
-
