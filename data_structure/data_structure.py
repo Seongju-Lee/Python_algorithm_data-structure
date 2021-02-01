@@ -1,6 +1,6 @@
 # 혼자 연습 파일
 
-# Linked_List 삽입 구현
+# Linked_List 삽입, 삭제 구현
 
 class Node:     # 하나의 노드 구현 클래스
 
@@ -31,9 +31,56 @@ class NodeManage:
             print(node.data)
             node = node.next
 
+    
+    def delete(self, data): # 데이터 삭제 메소드
+        
+        if self.head == None:
+            print("해당 데이터를 가진 노드가 없습니다.")
+        
+        
+        if self.head.data == data: # 해당 데이터를 가진 노드가 첫 번째 노드일때
+            
+            temp = self.head
+            self.head = self.head.next
+
+            del(temp)
+
+        else: # 해당 데이터가 중간이거나 마지막에 존재하는 노드인 경우
+            temp_node = self.head
+
+            while temp_node.next:
+                
+                if temp_node.next.data == data:
+                    del_node = temp_node.next
+                    temp_node.next = temp_node.next.next
+
+                    del(del_node)
+                else:
+                    temp_node = temp_node.next
+
+
 link = NodeManage(1)
 
 for i in range(2,11):
     link.add(i)
 
 link.desc()
+
+print('\n\n첫번째 노드 제거 후 ')
+link.delete(1)
+link.desc()
+
+print('\n\n중간 노드 제거 후 ')
+link.delete(5)
+link.desc()
+
+print('\n\n마지막 노드 제거 후 ')
+link.delete(10)
+link.desc()
+
+
+
+############################
+
+#  Double_Linked_List 구현
+
