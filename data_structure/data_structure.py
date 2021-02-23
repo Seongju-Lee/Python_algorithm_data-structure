@@ -117,6 +117,8 @@ class NodeMan:
 
             self.tail = new
 
+
+
 class Node: # 노드 구현 클래스
 
     def __init__(self, data, prev = None, next=None):
