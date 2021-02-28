@@ -86,39 +86,6 @@ link.desc()
 #  양방향으로 연결되어 있어서 노드탐색이 양쪽으로 모두 가능
 
 
-class Double_Node:
-
-    def __init__(self, data, prev = None, next = None):
-
-        self.data = data
-        self.prev = prev
-        self.next = next
-
-class NodeMan:
-
-    def __init__(self, data):
-        self.head = Double_Node(data)
-        self.tail = head
-
-    def insert(self, data):
-
-        if self.head == None: # 방어크드
-            self.head = Double_Node(data)
-            self.tail = self.head
-
-        else:
-            temp = self.head
-
-            while temp.next:
-                temp = temp.next
-            new = Double_Node(data)
-            temp.next = new
-            new.prev = temp
-
-            self.tail = new
-
-
-
 class Node: # 노드 구현 클래스
 
     def __init__(self, data, prev = None, next=None):
